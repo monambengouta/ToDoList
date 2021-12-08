@@ -3,6 +3,7 @@ const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
+const inputDate = document.getElementById("date-events")
 
 // onkeyup event
 inputBox.onkeyup = ()=>{
@@ -24,7 +25,8 @@ addBtn.onclick = ()=>{ //when user click on plus icon button
   }else{
     listArray = JSON.parse(getLocalStorageData);  //transforming json string into a js object
   }
-  listArray.push(userEnteredValue); //pushing or adding new value in array
+  
+  listArray.push(userEnteredValue+" "+inputDate.value); //pushing or adding new value in array
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
   showTasks(); //calling showTask function
   addBtn.classList.remove("active"); //unactive the add button once the task added
@@ -46,7 +48,14 @@ function showTasks(){
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+      if(inputDate.value===""){
+        newLiTag += `<li >${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+      }else if(inputDate.value > new Date().value){
+        newLiTag += `<li style="background: rgb(154, 216, 178);">${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+      }else 
+        newLiTag += `<li style="background: rgb(243, 165, 165);">${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+      
+   
   });
   todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
   inputBox.value = ""; //once task added leave the input field blank

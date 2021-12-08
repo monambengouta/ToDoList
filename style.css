@@ -10,9 +10,10 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #f7f7f7;
+    background-image: url("logo.jpg");
 
 }
+
 .wrapper{
     background: #fff;
     width: 450px;

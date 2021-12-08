@@ -1,0 +1,103 @@
+body {
+  overflow-x: hidden;
+  color: #505962;
+}
+
+.service-wrap {
+  z-index: -999 !important;
+}
+
+.service-background {
+  padding: 5rem 0;
+  z-index: 1000 !important;
+  
+}
+i{
+  color: #fff;
+ font-size: 2.5rem;
+}
+
+ul{
+  list-style-type: none;
+  max-width: 16rem;
+  margin: 0 auto;
+}
+/*.bi-instagram{
+  width:100x; height:100px;
+  background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1)
+}*/
+.para-footer{
+  color: #fff;
+}
+#contact {
+  z-index: 1000;
+}
+
+
+
+/*============= FOOTER =============*/
+
+
+/*===== FIXED BACKGROUND IMG =====*/
+.fixed {
+  position: fixed;
+  /* The element is positioned relative to the viewport which means it always stays in the same place even if the page is scrolled.*/
+  display: block;
+  /* An element starts on a new line and takes the whole width. */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  /* The background image covers the entire container even if it's stretched or croped */
+  background-position: center center;
+}
+
+.fixed-background {
+  position: relative;
+  /* The element is positioned relative to its normal position + set the top, bottom... properties to adjust the position */
+  width: 100%;
+}
+
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  /*clip-path: inset(10%, 10%, 10%, 10%);*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.caption{
+  transform: translate(-50% ,-50%);
+}
+/*============= MEDIA QUERIES =============*/
+/*@media (min-width: 1400px) {
+.caption{
+  top:calcul()
+}
+}*/
+/* Devices under 1199px (xl) */
+@media (min-width: 1200px) {
+
+}
+/* Devices under 992px (lg) */
+@media (max-width: 992px) {
+ /* .caption {
+    top:30% ;
+
+  }*/
+
+}
+/* Devices under 768px (md) */
+@media (max-width: 768px) {
+  
+}
+/* Devices under 576px (sm) */
+@media (max-width: 576px) {
+  
+}

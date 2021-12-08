@@ -13,13 +13,17 @@
       <div class="details">
         
         <header>Todo App</header>
-        <div class="logout">LogOut</div>
+        <div class="logout"><a href="../login/Login.html">LogOut</a></div>
       </div>
-    
+      <form method="post" action="ToDoList.php">
     <div class="inputField">
-      <input type="text" placeholder="Add your new todo">
-      <button><i class="fas fa-plus"></i></button>
+      
+      <input type="text" name="texts" placeholder="Add your new todo">
+      <input type="date" name="date" id="date-events" >
+      <button type="submit" name="submit"><i class="fas fa-plus"></i></button>
+    
     </div>
+  </form>
     <ul class="todoList">
       <!-- data are comes from local storage -->
     </ul>
